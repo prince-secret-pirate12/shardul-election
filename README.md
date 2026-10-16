@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shardul vs Sattu vs Aash — No-login live voting
 
 Visitors can vote directly without creating an account. The original Shardul and Aash image bytes are unchanged; Sattu has the grey default avatar. Flask-SocketIO broadcasts results to all connected clients and the central database persists counts.
@@ -24,3 +25,6 @@ The public site has no login. The separate `/admin` page has a protected admin s
 ## Render deployment
 
 Use a Render web service with PostgreSQL. Set `DATABASE_URL`, `SECRET_KEY`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `COOKIE_SECURE=1`. Build: `pip install -r requirements.txt`. Start: `gunicorn --worker-class gthread --threads 8 --workers 1 --bind 0.0.0.0:$PORT app:app`. Use one worker; multi-instance deployments require Redis for Socket.IO broadcasts and suitable load-balancing. Do not use ephemeral SQLite in production. After deploying, test two devices and verify both see the same count without refreshing.
+=======
+# shardul-election
+>>>>>>> 1ea2ab01ffbfb83927c41e7c1c13766cc66f64f5
